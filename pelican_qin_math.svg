@@ -1,0 +1,335 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs>
+    <!-- Background Sky Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e3c72"/>
+      <stop offset="35%" stop-color="#2a5298"/>
+      <stop offset="70%" stop-color="#7aa1d2"/>
+      <stop offset="100%" stop-color="#fbc2eb"/>
+    </linearGradient>
+
+    <!-- Wing Metal Gradient -->
+    <linearGradient id="wingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0e4e8"/>
+      <stop offset="50%" stop-color="#b0b8c2"/>
+      <stop offset="100%" stop-color="#7a8594"/>
+    </linearGradient>
+
+    <!-- Cockpit Glass Gradient -->
+    <linearGradient id="cockpitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#4facfe" stop-opacity="0.75"/>
+    </linearGradient>
+
+    <!-- Engine Jet Glow -->
+    <radialGradient id="jetGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fffb96"/>
+      <stop offset="40%" stop-color="#ff793f"/>
+      <stop offset="80%" stop-color="#ff3838" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ff3838" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gold Foil Gradient for Emperor & Wukong -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffeaa7"/>
+      <stop offset="50%" stop-color="#fdcb6e"/>
+      <stop offset="100%" stop-color="#d63031"/>
+    </linearGradient>
+
+    <!-- Polar Bear Fur Gradient -->
+    <linearGradient id="bearGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#f1f2f6"/>
+      <stop offset="100%" stop-color="#dfe4ea"/>
+    </linearGradient>
+
+    <!-- Pelican Pouch Gradient -->
+    <linearGradient id="beakGrad" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#ffa502"/>
+      <stop offset="100%" stop-color="#ff6348"/>
+    </linearGradient>
+
+    <!-- Comic Bubble Shadow Filter -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="4" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- SKY BACKGROUND -->
+  <rect width="1200" height="900" fill="url(#skyGrad)"/>
+
+  <!-- CLOUDS & SPEED LINES -->
+  <g opacity="0.45">
+    <ellipse cx="200" cy="180" rx="220" ry="45" fill="#ffffff" filter="blur(8px)"/>
+    <ellipse cx="980" cy="260" rx="280" ry="55" fill="#ffffff" filter="blur(10px)"/>
+    <ellipse cx="600" cy="120" rx="160" ry="35" fill="#ffffff" filter="blur(6px)"/>
+    <!-- Wind & Speed Streaks -->
+    <path d="M-50,220 L350,215 M150,150 L650,145 M500,280 L1100,275 M50,420 L550,415 M700,380 L1250,375" 
+          stroke="#ffffff" stroke-width="2.5" stroke-dasharray="25,15" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- ==================== 1. GIANT AIRPLANE (BODY & COCKPIT) ==================== -->
+  <g id="airplane">
+    <!-- Main Fuselage Body (Left Background) -->
+    <path d="M-80,480 C120,400 320,460 380,560 L350,780 L-100,820 Z" fill="#95afc0" stroke="#535c68" stroke-width="4"/>
+    <path d="M-60,520 L360,570" stroke="#eb4d4b" stroke-width="8" stroke-dasharray="40,12"/>
+    
+    <!-- Cockpit Canopy Glass -->
+    <path d="M120,460 C160,430 260,435 290,480 L260,530 C200,500 150,500 110,510 Z" 
+          fill="url(#cockpitGrad)" stroke="#2c3e50" stroke-width="4"/>
+
+    <!-- SUN WUKONG IN COCKPIT -->
+    <g id="sun_wukong" transform="translate(180, 445) scale(0.65)">
+      <!-- Monkey Face -->
+      <circle cx="45" cy="40" r="32" fill="#d35400"/>
+      <ellipse cx="45" cy="44" rx="26" ry="22" fill="#f8c291"/>
+      <!-- Eyes & Aviator Sunglasses -->
+      <rect x="22" y="28" width="46" height="18" rx="8" fill="#130f40" stroke="#f1c40f" stroke-width="2.5"/>
+      <circle cx="34" cy="37" r="3" fill="#ffffff" opacity="0.7"/>
+      <circle cx="56" cy="37" r="3" fill="#ffffff" opacity="0.7"/>
+      <!-- Monkey Nose & Grinning Mouth -->
+      <path d="M42,50 Q45,46 48,50" stroke="#8c2f00" stroke-width="2" fill="none"/>
+      <path d="M35,56 Q45,66 55,56" stroke="#8c2f00" stroke-width="2.5" fill="#e74c3c"/>
+      <!-- Phoenix-Feather Cap (凤翅紫金冠) -->
+      <path d="M20,18 L70,18 L60,4 L30,4 Z" fill="url(#goldGrad)" stroke="#b71540" stroke-width="2"/>
+      <!-- Two Long Pheasant Tail Feathers (雉鸡翎) Streamers -->
+      <path d="M30,5 Q-20,-80 50,-120" stroke="#e84118" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <path d="M60,5 Q120,-70 80,-125" stroke="#e84118" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <!-- Pilot Headset -->
+      <path d="M15,35 Q12,15 45,15 Q78,15 75,35" fill="none" stroke="#2c3e50" stroke-width="5"/>
+      <rect x="10" y="30" width="8" height="16" rx="3" fill="#7f8c8d"/>
+      <rect x="72" y="30" width="8" height="16" rx="3" fill="#7f8c8d"/>
+      <!-- Golden Armor Collar & Hands on Steering Yoke -->
+      <path d="M15,72 L75,72 L85,95 L5,95 Z" fill="url(#goldGrad)"/>
+      <path d="M28,88 L62,88 M45,88 L45,100" stroke="#f5f6fa" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <!-- Jet Engine Under Wing -->
+    <g id="jet_engine" transform="translate(480, 680)">
+      <!-- Intake Cowling -->
+      <ellipse cx="0" cy="0" rx="35" ry="50" fill="#2f3542" stroke="#57606f" stroke-width="5"/>
+      <ellipse cx="-8" cy="0" rx="20" ry="38" fill="#1e272e"/>
+      <rect x="0" y="-48" width="130" height="96" fill="#747d8c"/>
+      <!-- Exhaust Flare -->
+      <polygon points="130,-35 260,-15 130,5" fill="url(#jetGlow)"/>
+    </g>
+
+    <!-- GIGANTIC WING SURFACE (The runway) -->
+    <!-- Wing extends from bottom-left to mid-right across the canvas -->
+    <polygon points="280,560 1220,510 1240,630 200,810" fill="url(#wingGrad)" stroke="#57606f" stroke-width="4"/>
+    <!-- Wing Panels & Rivets -->
+    <line x1="420" y1="550" x2="350" y2="760" stroke="#ffffff" stroke-width="1.8" opacity="0.6"/>
+    <line x1="620" y1="535" x2="560" y2="720" stroke="#ffffff" stroke-width="1.8" opacity="0.6"/>
+    <line x1="840" y1="525" x2="800" y2="675" stroke="#ffffff" stroke-width="1.8" opacity="0.6"/>
+    <line x1="1040" y1="515" x2="1010" y2="640" stroke="#ffffff" stroke-width="1.8" opacity="0.6"/>
+    <line x1="280" y1="600" x2="1230" y2="540" stroke="#333333" stroke-width="2" stroke-dasharray="15,10" opacity="0.4"/>
+  </g>
+
+  <!-- ==================== 2. PELICAN RIDING BICYCLE ==================== -->
+  <g id="pelican_and_bike" transform="translate(680, 360)">
+    
+    <!-- --- BICYCLE --- -->
+    <g id="bicycle" transform="translate(0, 150)">
+      <!-- Ground Shadow -->
+      <ellipse cx="30" cy="85" rx="100" ry="12" fill="#2d3436" opacity="0.45"/>
+      <!-- Rear Wheel -->
+      <circle cx="-55" cy="70" r="38" fill="none" stroke="#2f3542" stroke-width="6"/>
+      <circle cx="-55" cy="70" r="34" fill="none" stroke="#ced6e0" stroke-width="2"/>
+      <line x1="-55" y1="32" x2="-55" y2="108" stroke="#a4b0be" stroke-width="1.5"/>
+      <line x1="-93" y1="70" x2="-17" y2="70" stroke="#a4b0be" stroke-width="1.5"/>
+      <!-- Front Wheel -->
+      <circle cx="105" cy="70" r="38" fill="none" stroke="#2f3542" stroke-width="6"/>
+      <circle cx="105" cy="70" r="34" fill="none" stroke="#ced6e0" stroke-width="2"/>
+      <line x1="105" y1="32" x2="105" y2="108" stroke="#a4b0be" stroke-width="1.5"/>
+      <line x1="67" y1="70" x2="143" y2="70" stroke="#a4b0be" stroke-width="1.5"/>
+      <!-- Frame Bars (Vibrant Teal/Cyan) -->
+      <polyline points="-55,70 10,70 -10,18 -55,70" fill="none" stroke="#00d2d3" stroke-width="7" stroke-linejoin="round"/>
+      <polyline points="10,70 90,20 -10,18" fill="none" stroke="#00d2d3" stroke-width="7" stroke-linejoin="round"/>
+      <line x1="90" y1="20" x2="105" y2="70" stroke="#00d2d3" stroke-width="7"/>
+      <!-- Handlebars & Seat -->
+      <path d="M85,20 L95,-5 L115,-2" fill="none" stroke="#2f3542" stroke-width="6" stroke-linecap="round"/>
+      <path d="-25,12 L5,14" stroke="#2f3542" stroke-width="8" stroke-linecap="round"/>
+      <!-- Pedals & Chain Wheel -->
+      <circle cx="10" cy="70" r="10" fill="#747d8c"/>
+      <line x1="10" y1="70" x2="22" y2="84" stroke="#2f3542" stroke-width="4"/>
+      <line x1="15" y1="84" x2="29" y2="84" stroke="#ff4757" stroke-width="5" stroke-linecap="round"/>
+    </g>
+
+    <!-- --- PELICAN BODY & GIANT WINGS --- -->
+    <g id="pelican">
+      <!-- Pelican Body -->
+      <ellipse cx="25" cy="115" rx="55" ry="42" fill="#ffffff" stroke="#ced6e0" stroke-width="3"/>
+      <!-- Pelican Tail Feathers -->
+      <polygon points="-30,115 -60,105 -50,125" fill="#f1f2f6" stroke="#ced6e0" stroke-width="2"/>
+      
+      <!-- Legs & Webbed Feet on Pedals -->
+      <line x1="15" y1="145" x2="22" y2="234" stroke="#ff7f50" stroke-width="5"/>
+      <polygon points="12,234 32,234 26,242 16,242" fill="#ff6348"/>
+      
+      <!-- Long S-Curved Neck & Head -->
+      <path d="M60,110 C90,80 80,10 115,-5" fill="none" stroke="#ffffff" stroke-width="28" stroke-linecap="round"/>
+      <circle cx="120" cy="-10" r="22" fill="#ffffff"/>
+      <!-- Eye (Determined / Funny Look) -->
+      <circle cx="126" cy="-15" r="7" fill="#ffffff" stroke="#2f3542" stroke-width="2"/>
+      <circle cx="128" cy="-15" r="3.5" fill="#2f3542"/>
+      <!-- Bicycle Helmet on Pelican! -->
+      <path d="M102,-20 Q124,-38 142,-18 Z" fill="#ff4757"/>
+      <line x1="108" y1="-18" x2="114" y2="-4" stroke="#2f3542" stroke-width="2"/>
+
+      <!-- GIANT PELICAN BEAK & OPEN POUCH SHOUTING -->
+      <path d="M135,-18 L240,-10 L140,15 Z" fill="#ffa502" stroke="#e67e22" stroke-width="2"/>
+      <!-- Drooping Giant Gular Pouch -->
+      <path d="M140,5 C175,25 220,15 235,-5 C205,45 150,45 130,12 Z" fill="url(#beakGrad)" opacity="0.95"/>
+
+      <!-- MASSIVE OUTSTRETCHED WINGS (Holding the Polar Bear) -->
+      <!-- Left Wing Spanning Out -->
+      <path d="M10,95 C-70,50 -140,20 -180,0 C-130,25 -60,80 5,115 Z" 
+            fill="#ffffff" stroke="#dfe4ea" stroke-width="3"/>
+      <!-- Right Wing Spanning Out & Forming a Strong Platform -->
+      <!-- Wing Platform: X from -150 to +110, Y approx 0 to 40 -->
+      <path d="M20,90 C-40,40 -110,25 -150,30 C-90,15 40,10 120,40 C100,60 50,85 20,90 Z" 
+            fill="#f8f9fa" stroke="#b2bec3" stroke-width="3"/>
+      <!-- Primary Flight Feathers Silhouette -->
+      <path d="M-150,30 L-180,35 M-130,25 L-155,18 M-90,15 L-110,5 M100,45 L130,52" 
+            stroke="#ced6e0" stroke-width="3"/>
+    </g>
+
+    <!-- ==================== 3. POLAR BEAR RESTING ON WINGS ==================== -->
+    <g id="polar_bear" transform="translate(-15, -45)">
+      <!-- Bear Shadow on Wings -->
+      <ellipse cx="0" cy="65" rx="85" ry="14" fill="#747d8c" opacity="0.4"/>
+      
+      <!-- Bear Main Body (Chubby & Fluffy) -->
+      <ellipse cx="-5" cy="20" rx="75" ry="46" fill="url(#bearGrad)" stroke="#ced6e0" stroke-width="2.5"/>
+      <!-- Bear Rear Paw hanging cute -->
+      <circle cx="-65" cy="35" r="16" fill="#f1f2f6"/>
+      <ellipse cx="-68" cy="40" rx="10" ry="6" fill="#dfe4ea"/>
+      <!-- Bear Front Leg & Paws gripping wing -->
+      <ellipse cx="50" cy="45" rx="18" ry="14" fill="#ffffff" stroke="#ced6e0" stroke-width="2"/>
+      <path d="M42,56 C46,59 58,59 62,56" stroke="#2f3542" stroke-width="2.5" fill="none"/>
+      
+      <!-- Bear Head -->
+      <circle cx="55" cy="2" r="28" fill="url(#bearGrad)" stroke="#ced6e0" stroke-width="2"/>
+      <!-- Bear Ears -->
+      <circle cx="45" cy="-22" r="8" fill="#ffffff" stroke="#ced6e0" stroke-width="2"/>
+      <circle cx="45" cy="-22" r="4" fill="#fab1a0"/>
+      <circle cx="68" cy="-20" r="7" fill="#ffffff" stroke="#ced6e0" stroke-width="2"/>
+      <!-- Bear Snout & Face (Funny Calm Expression) -->
+      <ellipse cx="72" cy="8" rx="14" ry="10" fill="#f5f6fa"/>
+      <polygon points="76,4 84,4 80,10" fill="#2f3542"/>
+      <circle cx="62" cy="-2" r="3.5" fill="#2f3542"/>
+      <circle cx="75" cy="0" r="2.5" fill="#2f3542"/>
+      <!-- Cute Bear Tail -->
+      <circle cx="-80" cy="15" r="10" fill="#ffffff"/>
+    </g>
+
+    <!-- ==================== 4. QIN SHI HUANG TIGHTENING SCREWS ==================== -->
+    <g id="qin_shi_huang" transform="translate(-18, -135)">
+      <!-- Imperial Robe Lower Body (Draped over bear) -->
+      <path d="M-30,65 C-20,35 20,35 30,65 C15,75 -15,75 -30,65 Z" fill="#2d3436"/>
+      <path d="M-15,65 L0,45 L15,65" stroke="url(#goldGrad)" stroke-width="3" fill="none"/>
+
+      <!-- Emperor Torso & Majestic Black/Gold Dragon Robe -->
+      <path d="M-28,30 L-18,65 L18,65 L28,30 Z" fill="#1e272e" stroke="#2f3542" stroke-width="2"/>
+      <!-- Embroidered Imperial Gold Dragon Emblem -->
+      <circle cx="0" cy="46" r="12" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-dasharray="6,3"/>
+
+      <!-- Shoulders & Arms Reaching Forward with Wrench/Screwdriver -->
+      <!-- Left Arm supporting -->
+      <path d="M-25,32 L-10,48 L15,48" stroke="#1e272e" stroke-width="12" stroke-linecap="round"/>
+      <!-- Right Arm Actively Driving Screws into Bear/Wing Assembly -->
+      <path d="M22,30 L45,42 L55,56" stroke="#1e272e" stroke-width="12" stroke-linecap="round"/>
+      <!-- Hands in white gloves holding tool -->
+      <circle cx="56" cy="58" r="6" fill="#f5cd79"/>
+
+      <!-- Tool: Electric Screwdriver / Industrial Wrench -->
+      <g id="tool" transform="translate(56, 56) rotate(35)">
+        <rect x="-4" y="-8" width="18" height="8" rx="2" fill="#e74c3c"/>
+        <rect x="14" y="-6" width="16" height="4" fill="#95a5a6"/>
+        <!-- Screw Bit -->
+        <polygon points="30,-5 36,-4 30,-3" fill="#7f8c8d"/>
+        <!-- Screw & Sparks flying! -->
+        <circle cx="36" cy="-4" r="3" fill="#bdc3c7"/>
+        <!-- Electric / Metal Sparks -->
+        <path d="M38,-10 L44,-16 M40,2 L48,8 M42,-4 L52,-6" stroke="#f1c40f" stroke-width="2.5" stroke-linecap="round"/>
+        <polygon points="46,-12 43,-7 48,-8" fill="#ffa502"/>
+      </g>
+
+      <!-- Screw already drilled into plate on bear's decorative harness -->
+      <rect x="68" y="70" width="16" height="6" rx="2" fill="#7f8c8d"/>
+      <circle cx="72" cy="73" r="2" fill="#2c3e50"/>
+      <circle cx="80" cy="73" r="2" fill="#2c3e50"/>
+
+      <!-- Qin Shi Huang Head & Majestic Beard -->
+      <circle cx="2" cy="12" r="16" fill="#f8c291"/>
+      <!-- Solemn Imperial Face -->
+      <path d="M-4,10 L-1,12 M7,10 L10,12" stroke="#2c3e50" stroke-width="2.5"/>
+      <circle cx="-2" cy="13" r="2" fill="#2c3e50"/>
+      <circle cx="8" cy="13" r="2" fill="#2c3e50"/>
+      <!-- Iconic Long Royal Beard -->
+      <path d="M-2,19 Q3,36 3,42 Q4,36 9,19 Z" fill="#2c3e50"/>
+
+      <!-- IMPERIAL CROWN (冕冠 Mianguan with 12 Tassels) -->
+      <!-- Flat Rectangular Crown Board -->
+      <polygon points="-26,-6 32,-14 36,-8 -22,0" fill="#2c3e50" stroke="url(#goldGrad)" stroke-width="2"/>
+      <!-- Crown Base Cap on Head -->
+      <path d="M-8,-4 L14,-7 L12,4 L-6,6 Z" fill="#b71540"/>
+      <!-- 12 Jade Beads Tassels (旒 Liú) Hanging from the front -->
+      <g stroke="url(#goldGrad)" stroke-width="1.8" opacity="0.95">
+        <line x1="22" y1="-10" x2="23" y2="10"/>
+        <line x1="26" y1="-11" x2="27" y2="12"/>
+        <line x1="30" y1="-12" x2="31" y2="14"/>
+        <line x1="34" y1="-13" x2="35" y2="16"/>
+      </g>
+      <!-- Jade Beads on Tassels -->
+      <circle cx="23" cy="4" r="1.5" fill="#2ed573"/>
+      <circle cx="27" cy="6" r="1.5" fill="#ff4757"/>
+      <circle cx="31" cy="7" r="1.5" fill="#1e90ff"/>
+      <circle cx="35" cy="9" r="1.5" fill="#ffa502"/>
+    </g>
+
+  </g>
+
+  <!-- ==================== 5. COMIC DIALOGUE BUBBLE ==================== -->
+  <!-- Pelican Shouts the Answer to the Math Puzzle -->
+  <g id="speech_bubble" filter="url(#dropShadow)" transform="translate(680, 80)">
+    <!-- Bubble Connecting Tail to Pelican's Open Beak (Origin at approx 220, 260) -->
+    <path d="M120,240 Q155,275 210,270 Q160,245 145,220 Z" fill="#ffffff" stroke="#2c3e50" stroke-width="4"/>
+    
+    <!-- Big Rounded Dialogue Box -->
+    <rect x="-260" y="0" width="460" height="230" rx="35" fill="#ffffff" stroke="#2c3e50" stroke-width="5"/>
+    
+    <!-- Bubble Content Header -->
+    <rect x="-240" y="16" width="420" height="42" rx="10" fill="#f1f2f6"/>
+    <text x="-30" y="44" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="19" font-weight="bold" fill="#2f3542" text-anchor="middle">
+      🍬 糖果抽屉极值问题测算：
+    </text>
+
+    <!-- HUGE HIGHLIGHTED ANSWER NUMBER -->
+    <g transform="translate(-30, 125)">
+      <!-- Explosive Comic Starburst Background -->
+      <polygon points="0,-55 18,-20 55,-35 32,0 60,25 22,25 25,60 -5,30 -35,55 -25,18 -60,5 -22,-12 -40,-45 -5,-25" 
+               fill="#fffa65" stroke="#ff3838" stroke-width="3"/>
+      <text x="0" y="24" font-family="'Arial Black','Impact',sans-serif" font-size="78" font-weight="900" fill="#eb4d4b" text-anchor="middle" stroke="#2c3e50" stroke-width="2">
+        21
+      </text>
+    </g>
+
+    <!-- Explanation Footnote in Bubble -->
+    <text x="-30" y="180" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="18" font-weight="bold" fill="#2ed573" text-anchor="middle">
+      最少只需摸出 21 颗糖果！
+    </text>
+    <text x="-30" y="206" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#747d8c" text-anchor="middle">
+      （利用触感策略：摸 9 颗圆形 + 12 颗五角星）
+    </text>
+  </g>
+
+  <!-- ==================== 6. TITLE BANNER AT TOP ==================== -->
+  <g transform="translate(60, 45)">
+    <rect x="0" y="0" width="440" height="52" rx="12" fill="#000000" opacity="0.65"/>
+    <text x="20" y="34" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="20" font-weight="bold" fill="#ffffff">
+      ✈️ 孙悟空驾驶大型客机 · 机翼奇境 🛠️
+    </text>
+  </g>
+
+</svg>
